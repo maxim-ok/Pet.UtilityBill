@@ -10,7 +10,9 @@ public class ElectricityPayment {
     public double CalculateElectPayment(double oldCounterValue, double newCounterValue) {
 
 
-        double totalElectro = rate * (oldCounterValue - newCounterValue);
+
+
+        double totalElectro = rate * (newCounterValue - oldCounterValue);
         return totalElectro;
 
     }

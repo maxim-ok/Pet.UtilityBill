@@ -1,3 +1,6 @@
+import com.okunev.payservice.ElectricityPayment;
+import com.okunev.payservice.WaterSupplyPayment;
+
 public class CalculateTotalPayment {
 
     public static void main(String[] args) {

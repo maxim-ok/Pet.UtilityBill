@@ -1,8 +1,12 @@
+package com.okunev.payservice;
+
+
+
 public class ElectricityPayment {
 
     double rate = 5.92;
 
-    double CalculateElectPayment(double oldCounterValue, double newCounterValue) {
+    public double CalculateElectPayment(double oldCounterValue, double newCounterValue) {
 
         double totalElectro = rate * (newCounterValue - oldCounterValue);
 

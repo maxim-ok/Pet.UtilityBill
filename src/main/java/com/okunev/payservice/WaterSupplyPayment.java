@@ -1,10 +1,14 @@
+package com.okunev.payservice;
+
+
+
 public class WaterSupplyPayment {
 
     double boiledWaterRate = 211.67;
     double coldWaterRate = 43.74;
     double sanitationRate = 32.07;
 
-    double CalculateWaterPayment(double boiledWaterOldCounterValue, double boiledWaterNewCounterValue, double coldWaterOldCounterValue, double coldWaterNewCounterValue) {
+    public double CalculateWaterPayment(double boiledWaterOldCounterValue, double boiledWaterNewCounterValue, double coldWaterOldCounterValue, double coldWaterNewCounterValue) {
 
         double bWater = boiledWaterRate * (boiledWaterNewCounterValue - boiledWaterOldCounterValue);
         double cWater = coldWaterRate * (coldWaterNewCounterValue - coldWaterOldCounterValue);

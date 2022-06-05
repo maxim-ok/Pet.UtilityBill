@@ -1,5 +1,6 @@
 package com.okunev.payservice;
 
+import java.util.Scanner;
 
 
 public class WaterSupplyPayment {
@@ -10,18 +11,12 @@ public class WaterSupplyPayment {
 
     public double CalculateWaterPayment(double boiledWaterOldCounterValue, double boiledWaterNewCounterValue, double coldWaterOldCounterValue, double coldWaterNewCounterValue) {
 
+
         double bWater = boiledWaterRate * (boiledWaterNewCounterValue - boiledWaterOldCounterValue);
         double cWater = coldWaterRate * (coldWaterNewCounterValue - coldWaterOldCounterValue);
         double sanitation = sanitationRate * ((boiledWaterNewCounterValue - boiledWaterOldCounterValue) + (coldWaterNewCounterValue - coldWaterOldCounterValue));
 
         double totalWaterPayment = bWater + cWater + sanitation;
-
-        if (totalWaterPayment > 1500) {
-            System.out.println("Сколько можно можно лить воду, блэт?!");
-        } else {
-            System.out.println("Вода расходуется разумно");
-        }
-
         return totalWaterPayment;
 
     }

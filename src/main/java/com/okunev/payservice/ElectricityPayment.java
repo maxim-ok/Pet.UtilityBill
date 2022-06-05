@@ -1,5 +1,6 @@
 package com.okunev.payservice;
 
+import java.util.Scanner;
 
 
 public class ElectricityPayment {
@@ -8,15 +9,8 @@ public class ElectricityPayment {
 
     public double CalculateElectPayment(double oldCounterValue, double newCounterValue) {
 
-        double totalElectro = rate * (newCounterValue - oldCounterValue);
 
-
-        if (totalElectro > 650) {
-            System.out.println("Надо меньше жечь свет, миллионеры херовы!!!");
-        } else {
-            System.out.println("Свет расходуется разумно");
-        }
-
+        double totalElectro = rate * (oldCounterValue - newCounterValue);
         return totalElectro;
 
     }

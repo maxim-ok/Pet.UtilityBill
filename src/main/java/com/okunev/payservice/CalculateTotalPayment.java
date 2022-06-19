@@ -19,17 +19,6 @@ public class CalculateTotalPayment {
 
         double totalElectro = electro.CalculateElectPayment(oldCounterValue, newCounterValue);
 
-        if (totalElectro > 650) {
-           /* for (int i = 0; i < 2; i++) {
-                System.out.println("Надо меньше жечь свет, миллионеры херовы!!!");
-            }
-            ;*/
-            System.out.println("Надо меньше жечь свет, миллионеры херовы!!!");
-        } else {
-            System.out.println("Свет расходуется разумно");// Инфо, что надо бы подумать
-        }
-
-
         WaterSupplyPayment water = new WaterSupplyPayment();
 
         Scanner console2 = new Scanner(System.in);
@@ -46,6 +35,13 @@ public class CalculateTotalPayment {
         double coldWaterNewCounterValue = console3.nextDouble();
 
         double totalWater = water.CalculateWaterPayment(boiledWaterOldCounterValue, boiledWaterNewCounterValue, coldWaterOldCounterValue, coldWaterNewCounterValue);
+
+
+        if (totalElectro > 650) {
+            System.out.println("Надо меньше жечь свет, миллионеры херовы!!!");
+        } else {
+            System.out.println("Свет расходуется разумно");// Инфо, что надо бы подумать
+        }
 
         if (totalWater > 1500) {
             System.out.println("Сколько можно можно лить воду, блэт?!");

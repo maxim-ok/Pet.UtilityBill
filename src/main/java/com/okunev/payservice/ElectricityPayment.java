@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ElectricityPayment {
 
-    double rate = 5.92;
+    double rate = 6.43;
 
     public double CalculateElectPayment(double oldCounterValue, double newCounterValue) {
 

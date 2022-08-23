@@ -21,18 +21,18 @@ public class CalculateTotalPayment {
 
         WaterSupplyPayment water = new WaterSupplyPayment();
 
-        Scanner console2 = new Scanner(System.in);
+
         System.out.println("Введите СТАРЫЕ показания счетчика ГОРЯЧЕЙ воды:");
-        double boiledWaterOldCounterValue = console2.nextDouble();
+        double boiledWaterOldCounterValue = console.nextDouble();
         System.out.println("Введите НОВЫЕ показания счетчика ГОРЯЧЕЙ воды:");
-        double boiledWaterNewCounterValue = console2.nextDouble();
+        double boiledWaterNewCounterValue = console.nextDouble();
 
 
-        Scanner console3 = new Scanner(System.in);
+
         System.out.println("Введите СТАРЫЕ показания счетчика ХОЛОДНОЙ воды:");
-        double coldWaterOldCounterValue = console3.nextDouble();
+        double coldWaterOldCounterValue = console.nextDouble();
         System.out.println("Введите НОВЫЕ показания счетчика ХОЛОДНОЙ воды:");
-        double coldWaterNewCounterValue = console3.nextDouble();
+        double coldWaterNewCounterValue = console.nextDouble();
 
         double totalWater = water.CalculateWaterPayment(boiledWaterOldCounterValue, boiledWaterNewCounterValue, coldWaterOldCounterValue, coldWaterNewCounterValue);
 
